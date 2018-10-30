@@ -68,10 +68,10 @@ $(function () {
     });
     function init() {
         var myMap = new ymaps.Map("map", {
-            center: [55.19, 61.32],
+            center: [55.177066, 61.259498],
             zoom: 11
         }),
-                myPlacemark0 = new ymaps.Placemark([55.165258785672, 61.381437813492], {
+                myPlacemark0 = new ymaps.Placemark([55.177066, 61.259498], {
                     balloonContent: 'г. Челябинск, мкр. Парковый-2',
                     hintContent: 'г. Челябинск, мкр. Парковый-2'
                 }, {
