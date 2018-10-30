@@ -63,7 +63,10 @@ $(function () {
                 controls: false
             });
         } else {
-            portfolio.destroySlider();
+            if (portfolio.parent().hasClass('bx-viewport')) {
+                portfolio.destroySlider();
+                portfolio.startAuto();
+            }
         }
     });
     function init() {
