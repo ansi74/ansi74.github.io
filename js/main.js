@@ -10,13 +10,20 @@ $(function () {
         $('.js-close').hide();
         return false;
     });
+    var portfolio=$('.js-portfolio');
+    if ($(window).width() < 560) {
+            portfolio.bxSlider({
+                mode: 'fade',
+                controls: false
+            });
+        }
     $('a[href*="#"]')
             .not('[href="#"]')
             .not('[href="#0"]')
             .click(function (event) {
                 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
                     var ww = ($(window).width() < window.screen.width) ? $(window).width() : window.screen.width;
-                    var mw = 540;
+                    var mw = 560;
                     var ratio = ww / mw;
                     if (ww < mw) {
                         $('.js-main-menu').slideToggle();
@@ -50,26 +57,31 @@ $(function () {
             });
     $(window).resize(function () {
         $('.js-close').hide();
+        if ($(window).width() < 560) {
+            portfolio.bxSlider({
+                mode: 'fade',
+                controls: false
+            });
+        } else {
+            portfolio.destroySlider();
+        }
     });
-     ymaps.ready(init);
-
     function init() {
         var myMap = new ymaps.Map("map", {
             center: [55.19, 61.32],
             zoom: 11
         }),
-        
-                
-            myPlacemark0 = new ymaps.Placemark([55.165258785672,61.381437813492], {
-                balloonContent: 'г. Челябинск, ул. Энгельса, 43  (ПН-ВС с 08:00 до 21:00)',
-                hintContent: 'г. Челябинск, ул. Энгельса, 43  (ПН-ВС с 08:00 до 21:00)'
-            }, {
-                iconImageHref: '/uploads/valun.png',
-                iconImageSize: [41, 50],
-                iconImageOffset: [-3, -50]
-            });
-            
-            myMap.geoObjects.add(myPlacemark0);
-            myMap.controls.add('zoomControl', { top: 75, left: 5 });
-    }
- });
+                myPlacemark0 = new ymaps.Placemark([55.165258785672, 61.381437813492], {
+                    balloonContent: 'г. Челябинск, мкр. Парковый-2',
+                    hintContent: 'г. Челябинск, мкр. Парковый-2'
+                }, {
+                    iconImageHref: '/uploads/valun.png',
+                    iconImageSize: [41, 50],
+                    iconImageOffset: [-3, -50]
+                });
+
+        myMap.geoObjects.add(myPlacemark0);
+        myMap.controls.add('zoomControl', {top: 75, left: 5});
+    };
+    
+});

@@ -36,12 +36,7 @@
                     <span></span>
                 </a>
             </header>
-            <nav class="nav nav_secondary" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-                <a class="nav__item" itemprop="url" href="#home" title="Главная"><span itemprop="name">Главная</span></a>
-                <a class="nav__item" itemprop="url" href="#about-me" title="Обо мне"><span itemprop="name">Обо мне</span></a>
-                <a class="nav__item" itemprop="url" href="#portfolio" title="Портфолио"><span itemprop="name">Портфолио</span></a>
-                <a class="nav__item" itemprop="url" href="#contacts" title="Контакты"><span itemprop="name">Контакты</span></a>
-            </nav>
+            
             <section class="about-block" id='about-me'>
                 <div class="about-block__imgwrap">
                     <img src="uploads/about__img.jpg" alt="about me"/>
@@ -95,7 +90,7 @@
             </section>
             <section class="portfolio" id="portfolio">
                 <h2 class="portfolio__title">Портфолио</h2>
-                <div class="portfolio__slider">
+                <div class="portfolio__slider js-portfolio">
                     <div class="portfolio__slider__item">
                         <img src="uploads/portfolio/shininvest.png" alt="" />
                     </div>
@@ -144,12 +139,18 @@
                         +7 902 614-70-47
                     </p>
                 </div>
-                <div class="contacts__map">
-                    <div class="map" id="map">
-                    </div>
-                    <script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
+                <script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
+                <div class="contacts__map" id="map">
+                    
                 </div>
+                <nav class="nav nav_secondary" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+                <a class="nav__item" itemprop="url" href="#home" title="Главная"><span itemprop="name">Главная</span></a>
+                <a class="nav__item" itemprop="url" href="#about-me" title="Обо мне"><span itemprop="name">Обо мне</span></a>
+                <a class="nav__item" itemprop="url" href="#portfolio" title="Портфолио"><span itemprop="name">Портфолио</span></a>
+                <a class="nav__item" itemprop="url" href="#contacts" title="Контакты"><span itemprop="name">Контакты</span></a>
+            </nav>
             </section>
+            
         </section>
         <script src="js/vendors.js"></script>
         <script src="js/main.js"></script>
