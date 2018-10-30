@@ -10,13 +10,13 @@ $(function () {
         $('.js-close').hide();
         return false;
     });
-    var portfolio=$('.js-portfolio');
+    var portfolio = $('.js-portfolio');
     if ($(window).width() < 560) {
-            portfolio.bxSlider({
-                mode: 'fade',
-                controls: false
-            });
-        }
+        portfolio.bxSlider({
+            mode: 'fade',
+            controls: false
+        });
+    }
     $('a[href*="#"]')
             .not('[href="#"]')
             .not('[href="#0"]')
@@ -69,9 +69,10 @@ $(function () {
             }
         }
     });
+    ymaps.ready(init);
     function init() {
         var myMap = new ymaps.Map("map", {
-            center: [55.177066, 61.259498],
+            center: [55.17, 61.25],
             zoom: 11
         }),
                 myPlacemark0 = new ymaps.Placemark([55.177066, 61.259498], {
@@ -85,6 +86,6 @@ $(function () {
 
         myMap.geoObjects.add(myPlacemark0);
         myMap.controls.add('zoomControl', {top: 75, left: 5});
-    };
-    
+    }
+    ;
 });
