@@ -1,12 +1,157 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Личная страница</title>
+        <meta  name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes, width=320">
+        <link rel="stylesheet" href="css/vendors.css">
+        <link rel="stylesheet" href="css/main.css">
 
-<h1>This is a Home page</h1>
-<p>This is a paragraph.</p>
+        <meta name="format-detection" content="telephone=no">
 
-</body>
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+    </head>
+
+    <body>
+        <section class="container">
+            <header id='home' class="header" style="background: url('uploads/header__bg.jpg')">
+                <a href="#" title="Меню" class="menu js-menu">
+                    &infin; Меню
+                </a>
+                <a href="#" title="Меню" class="menu-close js-close">
+                    Х
+                </a>
+                <nav class="nav js-main-menu" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+                    <a class="nav__item" itemprop="url" href="#home" title="Главная"><span itemprop="name">Главная</span></a>
+                    <a class="nav__item" itemprop="url" href="#about-me" title="Обо мне"><span itemprop="name">Обо мне</span></a>
+                    <a class="nav__item" itemprop="url" href="#portfolio" title="Портфолио"><span itemprop="name">Портфолио</span></a>
+                    <a class="nav__item" itemprop="url" href="#contacts" title="Контакты"><span itemprop="name">Контакты</span></a>
+                </nav>
+                <a class="scroll-down" href="#about-me" title="узнать больше">
+                    узнать больше
+                    <span></span>
+                    <span></span>
+                </a>
+            </header>
+            <nav class="nav nav_secondary" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+                <a class="nav__item" itemprop="url" href="#home" title="Главная"><span itemprop="name">Главная</span></a>
+                <a class="nav__item" itemprop="url" href="#about-me" title="Обо мне"><span itemprop="name">Обо мне</span></a>
+                <a class="nav__item" itemprop="url" href="#portfolio" title="Портфолио"><span itemprop="name">Портфолио</span></a>
+                <a class="nav__item" itemprop="url" href="#contacts" title="Контакты"><span itemprop="name">Контакты</span></a>
+            </nav>
+            <section class="about-block" id='about-me'>
+                <div class="about-block__imgwrap">
+                    <img src="uploads/about__img.jpg" alt="about me"/>
+                </div>
+                <div class="about-block__text">
+                    <h1>Обо мне</h1>
+                    <h3>
+                        Казанцев Антон
+                    </h3>
+                    <p>
+                        Мужчина, 33 года, родился 21 сентября 1985
+                    </p>
+                    <p>
+                        Окончил Челябинский государсвенный педагогический университет по специальности Информатика, вычислительная техника и компьютерные технологии
+                    </p>
+                    <h3>Ключевые навыки</h3>
+                    <p>
+                        HTML5
+                        CSS3
+                        CSS
+                        Less
+                        jQuery
+                        HTML
+                        Adobe Photoshop
+                        Bootstrap
+                        CorelDRAW
+                        Кроссбраузерная верстка
+                        JavaScript
+                        Git
+                        Mercurial
+                        SVN
+                        Gulp
+                        1С-Битрикс
+                        Sass
+                        CSS Анимация
+                        SCSS
+                        Webpack
+                        БЭМ
+                        базовые знания php
+                        базовые знания mysql
+                        верстка email-рассылок
+                        Zeplin
+                    </p>
+                    
+                </div>
+                <a class="scroll-down scroll-down_about" href="#portfolio" title="keep scrolling, there is still more to come.">
+                    продолжайте листать
+                    <span></span>
+                    <span></span>
+                </a>
+            </section>
+            <section class="portfolio" id="portfolio">
+                <h2 class="portfolio__title">Портфолио</h2>
+                <div class="portfolio__slider">
+                    <div class="portfolio__slider__item">
+                        <img src="uploads/portfolio/shininvest.png" alt="" />
+                    </div>
+                    <div class="portfolio__slider__item">
+                        <img src="uploads/portfolio/maestroy.png" alt="" />
+                    </div>
+                    <div class="portfolio__slider__item">
+                        <img src="uploads/portfolio/perevozka.jpg" alt="" />
+                    </div>
+                    <div class="portfolio__slider__item">
+                        <img src="uploads/portfolio/new-tibet.png" alt="" />
+                    </div>
+                    <div class="portfolio__slider__item">
+                        <img src="uploads/portfolio/maxim.png" alt="" />
+                    </div>
+                    <div class="portfolio__slider__item">
+                        <img src="uploads/portfolio/vtorkom.jpg" alt="" />
+                    </div>
+                    <div class="portfolio__slider__item">
+                        <img src="uploads/portfolio/stompraktika.jpg" alt="" />
+                    </div>
+                    <div class="portfolio__slider__item">
+                        <img src="uploads/portfolio/chelmedic.png" alt="" />
+                    </div>
+                </div>
+                <a class="scroll-down scroll-down_contacts" href="#contacts" title="keep scrolling, there is still more to come.">
+                    контакты
+                    <span></span>
+                    <span></span>
+                </a>
+            </section>
+            <section class="contacts" id="contacts">
+                
+                <div class="contacts__text">
+                    <h1>Контакты</h1>
+                    <p>
+                        <strong>Телефон:</strong>
+                        +7 902 614-70-47
+                    </p>
+                    <p>
+                        <strong>E-mail:</strong>
+                        <a href="mailto:anton9966@gmail.com">anton9966@gmail.com</a>
+                    </p>
+                    <p>
+                        <strong>Телефон:</strong>
+                        +7 902 614-70-47
+                    </p>
+                </div>
+                <div class="contacts__map">
+                    <div class="map" id="map">
+                    </div>
+                    <script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
+                </div>
+            </section>
+        </section>
+        <script src="js/vendors.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
